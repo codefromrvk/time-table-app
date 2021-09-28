@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>time table app</title>
+    <link rel="stylesheet" href="styles.css" class="css">
+</head>
+
+<body>
+    <table id="table">
+        <caption>time table</caption>
+        <thead>
+            <tr>
+                <th>Days\Timings</th>
+                <th>9:00-9:55</th>
+                <th>10:00-10:55</th>
+                <th>11:10-12:05</th>
+                <th>12:10-1:00</th>
+                <th>2:00-2:40</th>
+                <th>2:45-3:30</th>
+                <th>3:35-4:15</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="mon">
+                <th>Monday</th>
+                <td class="subject">1</td>
+                <td class="subject">2</td>
+                <td class="subject">3</td>
+                <td class="subject">4</td>
+                <td class="subject">5</td>
+                <td class="subject">6</td>
+                <td class="subject">7</td>
+
+            </tr>
+            <tr>
+                <th>Tuesday</th>
+                <td class="subject">1</td>
+                <td class="subject">2</td>
+                <td class="subject">3</td>
+                <td class="subject">4</td>
+                <td class="subject">5</td>
+                <td class="subject">6</td>
+                <td class="subject">7</td>
+
+            </tr>
+            <tr>
+                <th>Wednesday</th>
+                <td class="subject">1</td>
+                <td class="subject">2</td>
+                <td class="subject">3</td>
+                <td class="subject">4</td>
+                <td class="subject">5</td>
+                <td class="subject">6</td>
+                <td class="subject">7</td>
+
+            </tr>
+            <tr>
+                <th>Thursday</th>
+                <td class="subject">1</td>
+                <td class="subject">2</td>
+                <td class="subject">3</td>
+                <td class="subject">4</td>
+                <td class="subject">5</td>
+                <td class="subject">6</td>
+                <td class="subject">7</td>
+
+            </tr>
+            <tr>
+                <th>Friday</th>
+                <td class="subject">1</td>
+                <td class="subject">2</td>
+                <td class="subject">3</td>
+                <td class="subject">4</td>
+                <td class="subject">5</td>
+                <td class="subject">6</td>
+                <td class="subject">7</td>
+
+            </tr>
+            <tr>
+                <th>Saturday</th>
+                <td class="subject">1</td>
+                <td class="subject">2</td>
+                <td class="subject">3</td>
+                <td class="subject">4</td>
+                <td class="subject">5</td>
+                <td class="subject">6</td>
+                <td class="subject">7</td>
+
+            </tr>
+        </tbody>
+
+
+    </table>
+
+    <section class="container">
+        <div id="left">
+            <label for="input-ele">
+                Enter the subject to be added
+                <input id="input-ele" type="text">
+            </label>
+            <button id="add-btn">Add</button>
+        </div>
+        <div id="right">
+            <p>Subjects added</p>
+            <ul id="lists">
+                <li class="list-item">demo sub</li>
+            </ul>
+        </div>
+
+
+    </section>
+    <script src="app.js"></script>
+</body>
+
+</html>
