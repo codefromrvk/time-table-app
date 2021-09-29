@@ -1,5 +1,6 @@
 const daySelected = document.querySelectorAll(".subject")
-const inputEle = document.querySelector("#input-ele")
+const inputEleSubject = document.querySelector("#input-ele-subject")
+const inputEleTime = document.querySelector("#input-ele-time")
 const addBtn = document.querySelector("#add-btn")
 const lists = document.querySelector("#lists")
 
@@ -17,7 +18,7 @@ for(let i = 0; i < daySelected.length; i++){
       console.log(clickCounter)
       // console.log(typeof(e.target))
       e.target.style.color="red";
-      let subjectInnerHTML = this.innerHTML;
+      // let subjectInnerHTML = this.innerHTML;
       if(clickCounter===1){
         swapFrom=e.target;
         swapFromText= e.target.innerText;
@@ -54,9 +55,10 @@ for(let i = 0; i < daySelected.length; i++){
 addBtn.addEventListener("click",function(){
     
    
-    let subject=inputEle.value;
+    let subject=inputEleSubject.value;
+    let time=inputEleTime.value;
     var li = document.createElement("li");
-    lists.appendChild(li).textContent =subject+" ";
+    lists.appendChild(li).textContent =subject+" "+time;
 
     // lists.innerHTML="<li>"+ subject +"</li>"
     
