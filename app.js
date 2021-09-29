@@ -12,8 +12,8 @@ for(let i = 0; i < daySelected.length; i++){
 
       daySelected[i].addEventListener("click", function (e){
       clickCounter+=1;
-      console.log(clickCounter)
-      console.log(e.target)
+      // console.log(clickCounter)
+      // console.log(e.target)
       e.target.style.color="red";
       let subjectInnerHTML = this.innerHTML;
       if(clickCounter===1){
@@ -28,11 +28,12 @@ for(let i = 0; i < daySelected.length; i++){
 
         clickCounter=0;
          
-        let elementList=e.target.parentNode.childNodes;
-         console.log([3])
-         elementList.forEach(ele => {
-           console.log(ele)
-         });
+        let elementList=e.target.parentNode.children;
+          for(var i=0;i<elementList.length;i++){
+            console.log(elementList.item(i))
+            elementList.item(i).style.color="black";
+
+          }
         }
 
     });
