@@ -3,24 +3,68 @@ const inputEle = document.querySelector("#input-ele")
 const addBtn = document.querySelector("#add-btn")
 const lists = document.querySelector("#lists")
 
+let subjectList=[];
+let swapFrom="";
+let swapTo="";
+let clickCounter=0;
+
 for(let i = 0; i < daySelected.length; i++){
-    daySelected[i].addEventListener("click", function (){
+
+      daySelected[i].addEventListener("click", function (e){
+      clickCounter+=1;
+      console.log(clickCounter)
+      console.log(e.target)
+      e.target.style.color="red";
       let subjectInnerHTML = this.innerHTML;
-    //   let subjectInnerHTML = event.target.innerHTML;
-    // console.log(this.parentNode.classList)
-      console.log(subjectInnerHTML)
+      if(clickCounter===1){
+        swapFrom=e.target.innerText;
+        console.log(swapFrom);
+      }
+      else if(clickCounter===2){
+        swapTo=e.target.innerText;
+        console.log(swapTo);
+      }
+      else {
+
+        clickCounter=0;
+         
+        let elementList=e.target.parentNode.childNodes;
+         console.log([3])
+         elementList.forEach(ele => {
+           console.log(ele)
+         });
+        }
 
     });
   }
-let subject="";
-  inputEle.addEventListener("keyup",function(){
-subject=this.value;
-console.log(subject)
-  })
-addBtn.addEventListener("click",function(){
 
-lists.innerHTML="<li>"+ subject +"</li>"
-console.log(lists.innerHTML)
+
+
+addBtn.addEventListener("click",function(){
+    
+   
+    let subject=inputEle.value;
+    var li = document.createElement("li");
+    lists.appendChild(li).textContent =subject+" ";
+
+    // lists.innerHTML="<li>"+ subject +"</li>"
+    
+
+    var removeBtn = document.createElement("input");
+    removeBtn.type = "button";
+    removeBtn.style.display="inline";
+    removeBtn.value = "Remove";
+    removeBtn.onclick = remove;
+    li.appendChild(removeBtn);
+
+    function remove(e) {
+      var el = e.target;
+      el.parentNode.remove();
+    }
+    // console.log(li)
+    
+    // console.log(subject)
+    lists.appendChild(li);
 
 })
 
