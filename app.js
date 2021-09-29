@@ -4,6 +4,7 @@
   const addBtn = document.querySelector("#add-btn")
   const lists = document.querySelector("#lists")
   const outputBtn=document.querySelector("#output-btn")
+  const freqEle=document.querySelector("#input-ele-freq")
 
   let subjectList=[];
   let swapFrom={};
@@ -59,10 +60,11 @@
       let subject=inputEleSubject.value;
      
       let time=inputEleTime.value;
+      let freq=freqEle.value;
       var li = document.createElement("li");
-      lists.appendChild(li).textContent =subject+" "+time;
+      lists.appendChild(li).textContent =subject+" "+time+" "+freq+" ";
 
-      subjectList.push({subject,time});
+      subjectList.push({subject,time,freq});
 
       var removeBtn = document.createElement("button");
       removeBtn.innerText = "remove";
@@ -73,7 +75,7 @@
       function remove(e) {
         let el = e.target;
         let splitEle=el.parentNode.innerText.split(" ");
-        
+ 
         for(let i=0;i<subjectList.length;i++){
           
           if(splitEle[0]===subjectList[i].subject){
