@@ -4,37 +4,47 @@ const addBtn = document.querySelector("#add-btn")
 const lists = document.querySelector("#lists")
 
 let subjectList=[];
-let swapFrom="";
-let swapTo="";
+let swapFrom={};
+let swapFromText="";
+let swapTo={};
+let swapToText="";
 let clickCounter=0;
 
 for(let i = 0; i < daySelected.length; i++){
 
       daySelected[i].addEventListener("click", function (e){
       clickCounter+=1;
-      // console.log(clickCounter)
-      // console.log(e.target)
+      console.log(clickCounter)
+      // console.log(typeof(e.target))
       e.target.style.color="red";
       let subjectInnerHTML = this.innerHTML;
       if(clickCounter===1){
-        swapFrom=e.target.innerText;
+        swapFrom=e.target;
+        swapFromText= e.target.innerText;
         console.log(swapFrom);
       }
       else if(clickCounter===2){
-        swapTo=e.target.innerText;
-        console.log(swapTo);
-      }
-      else {
-
+        swapTo=e.target;
+        swapToText= e.target.innerText;
+        swapFrom.innerText=swapToText;
+        swapTo.innerText=swapFromText;
         clickCounter=0;
          
-        let elementList=e.target.parentNode.children;
-          for(var i=0;i<elementList.length;i++){
-            console.log(elementList.item(i))
-            elementList.item(i).style.color="black";
+        let elementList1=swapTo.parentNode.children;
+          for(var i=0;i<elementList1.length;i++){
+            // console.log(elementList.item(i))
+            elementList1.item(i).style.color="black";
+            
 
           }
-        }
+        let elementList2=swapFrom.parentNode.children;
+          for(var i=0;i<elementList2.length;i++){
+            // console.log(elementList.item(i))
+            elementList2.item(i).style.color="black";
+            
+
+          }
+      }
 
     });
   }
