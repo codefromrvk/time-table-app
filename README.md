@@ -11,9 +11,11 @@ Schedule classes for students using this app
 
 ## Demo
 
-updating soon
-  
-## 
+https://time-table-rvk.netlify.app
+
+## Tech Stack
+
+HTML,CSS, Javascript
 
   
 ## 🚀 About Me
