@@ -3,8 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-#table {
+#main-header {
+  margin: 1rem;
+  text-align: center;
+}
+table {
+  /* width: 100%; */
   border: 1px solid black;
   border-collapse: collapse;
   margin: auto;
@@ -12,8 +16,8 @@
 td,
 th {
   border: 1px solid black;
+  text-align: center;
 }
-input,
 p {
   display: block;
 }
@@ -21,18 +25,23 @@ p {
   width: 77%;
 }
 .container {
-  margin: auto;
+  margin: 1rem auto;
   display: flex;
   /* flex-direction: column; */
   justify-content: space-around;
   align-items: flex-start;
   width: 50vw;
 }
-
+label {
+  display: block;
+  padding-bottom: 1rem;
+}
 #left {
   width: 50%;
+  padding: 1rem;
 }
 
 #right {
   width: 50%;
+  padding: 1rem;
 }
