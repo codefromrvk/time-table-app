@@ -45,3 +45,6 @@ label {
   width: 50%;
   padding: 1rem;
 }
+#right p {
+  margin: 1rem auto;
+}
