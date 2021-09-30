@@ -52,7 +52,14 @@
       });
     }
 
+function checkSubjectExist(sub){
+  for(let ele=0;ele<subjectList.length;ele++){
+    if(sub===subjectList[ele].subject) return true
 
+  }
+  return false;
+    
+}
 
   addBtn.addEventListener("click",function(){
       
@@ -61,16 +68,31 @@
      
       let time=inputEleTime.value;
       let freq=freqEle.value;
-      var li = document.createElement("li");
-      lists.appendChild(li).textContent =subject+" "+time+" "+freq+" ";
 
-      subjectList.push({subject,time,freq});
+      let checker=checkSubjectExist(subject);
+     
+      console.log(checker)
+      if(!checker){
+          var li = document.createElement("li");
 
-      var removeBtn = document.createElement("button");
-      removeBtn.innerText = "remove";
-      removeBtn.style.display="inline";
-      removeBtn.onclick = remove;
-      li.appendChild(removeBtn);
+          lists.appendChild(li).textContent =subject+" "+time+" "+freq+" ";
+
+
+          subjectList.push({subject,time,freq});
+
+          var removeBtn = document.createElement("button");
+          removeBtn.innerText = "remove";
+          removeBtn.style.display="inline";
+          removeBtn.onclick = remove;
+          li.appendChild(removeBtn);
+          lists.appendChild(li);
+
+
+      }
+
+      
+
+      
 
       function remove(e) {
         let el = e.target;
@@ -83,13 +105,11 @@
           }
 
         }
-        // console.log(subjectList,"aftr");
        
         el.parentNode.remove();
-        // subjectList.
       }
 
-      lists.appendChild(li);
+     
 
   })
 
@@ -97,13 +117,26 @@
   function getRandomIndex(){
     return indexValue=Math.floor(Math.random()*subjectList.length)
   }
-  outputBtn.addEventListener("click",function(){
-        console.log("sublist",subjectList)
 
+  outputBtn.addEventListener("click",function(){
+
+        clearAll()
+    
+        console.log("sublist",subjectList)
+        let copyOfSubjectList=subjectList;
         for(let i = 0; i < subjects.length; i++){
               let indexvalue=getRandomIndex();
-              subjects[i].innerText= subjectList[indexvalue].subject;
-              console.log(subjects[i].innerText)
+              
+              
+              for (let j=0;j<copyOfSubjectList.length;j++){
+                if(subjectList[indexvalue].subject===copyOfSubjectList[j].subject){
+                    if(copyOfSubjectList[j].freq>0){
+                      subjects[i].innerText= subjectList[indexvalue].subject;
+                      copyOfSubjectList[j].freq-=1;
+                    }
+                }
+              }
+              
               
               // console.log(subjects[i].innerText)
 
@@ -113,6 +146,14 @@
   })
 
 
+function clearAll(){
 
+  for(let i = 0; i < subjects.length; i++){
+    console.log(subjects[i])
+
+    subjects[i].innerText="---";
+
+}
+}
 
 
