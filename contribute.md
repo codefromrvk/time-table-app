@@ -5,7 +5,7 @@
 - Fork this Repository using the button at the top
 - Clone your forked repository to your pc
 - Create a new branch for your modifications using either of the git commands below 
-    - `git branch new-user` and checkout to it `git checkout new-user` 
+    - `git branch feat` and checkout to it `git checkout feat` 
     
     ***or*** 
 
