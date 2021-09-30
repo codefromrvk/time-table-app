@@ -19,7 +19,9 @@ HTML,CSS, Javascript
 
 ## Want to contribute?
 
-Checkout contribute.md
+Checkout  [contribute.md](https://github.com/codefromrvk/time-table-app/blob/main/contribute.md)
+
+
 
 ## 🚀 About Me
 I'm an aspiring full stack developer..
