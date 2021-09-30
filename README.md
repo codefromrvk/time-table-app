@@ -17,7 +17,10 @@ https://time-table-rvk.netlify.app
 
 HTML,CSS, Javascript
 
-  
+## Want to contribute?
+
+Checkout contribute.md
+
 ## 🚀 About Me
 I'm an aspiring full stack developer..
 
