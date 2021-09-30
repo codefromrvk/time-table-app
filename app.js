@@ -17,10 +17,9 @@
 
         subjects[i].addEventListener("click", function (e){
         clickCounter+=1;
-        console.log(clickCounter)
-        // console.log(typeof(e.target))
+
         e.target.style.color="red";
-        // let subjectInnerHTML = this.innerHTML;
+
         if(clickCounter===1){
           swapFrom=e.target;
           swapFromText= e.target.innerText;
@@ -35,14 +34,13 @@
           
           let elementList1=swapTo.parentNode.children;
             for(var i=0;i<elementList1.length;i++){
-              // console.log(elementList.item(i))
+
               elementList1.item(i).style.color="black";
               
-
             }
           let elementList2=swapFrom.parentNode.children;
             for(var i=0;i<elementList2.length;i++){
-              // console.log(elementList.item(i))
+
               elementList2.item(i).style.color="black";
               
 
@@ -54,6 +52,7 @@
 
 function checkSubjectExist(sub){
   for(let ele=0;ele<subjectList.length;ele++){
+    
     if(sub===subjectList[ele].subject) return true
 
   }
@@ -70,8 +69,8 @@ function checkSubjectExist(sub){
       let freq=freqEle.value;
 
       let checker=checkSubjectExist(subject);
+
      
-      console.log(checker)
       if(!checker){
           var li = document.createElement("li");
 
@@ -122,8 +121,7 @@ function checkSubjectExist(sub){
 
         clearAll()
     
-        console.log("sublist",subjectList)
-        let copyOfSubjectList=subjectList;
+        let copyOfSubjectList=JSON.parse(JSON.stringify(subjectList));
         for(let i = 0; i < subjects.length; i++){
               let indexvalue=getRandomIndex();
               
@@ -136,9 +134,6 @@ function checkSubjectExist(sub){
                     }
                 }
               }
-              
-              
-              // console.log(subjects[i].innerText)
 
         }
 
@@ -149,7 +144,6 @@ function checkSubjectExist(sub){
 function clearAll(){
 
   for(let i = 0; i < subjects.length; i++){
-    console.log(subjects[i])
 
     subjects[i].innerText="---";
 
