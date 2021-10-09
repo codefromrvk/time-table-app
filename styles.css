@@ -3,10 +3,17 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+:root {
+  --primary-color: #1d4ed8;
+  --secondary-color: #93c5fd;
+}
+li {
+  list-style: none;
+}
 #main-header {
   margin: 1rem;
   text-align: center;
+  color: var(--primary-color);
 }
 #table-container {
   padding: 1rem;
@@ -14,13 +21,17 @@
 table {
   width: 50%;
   margin: auto;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   border-collapse: collapse;
   font-size: 0.8rem;
 }
+tbody {
+  background-color: var(--secondary-color);
+  border-radius: 0.5rem;
+}
 td,
 th {
-  border: 1px solid black;
+  border: 1px solid var(--primary-color);
   text-align: center;
 }
 p {
@@ -52,4 +63,45 @@ label {
 }
 #right p {
   margin: 1rem auto;
+}
+#add-btn {
+  display: block;
+  padding: 0.1rem 1.2rem;
+}
+#output-btn {
+  display: block;
+  padding: 0.1rem 1.2rem;
+}
+.css-button-retro--sky {
+  /* min-width: 130px;
+  height: 40px; */
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border: 1px solid #000;
+  color: #000;
+  background: transparent;
+}
+
+/* Css generators */
+
+.css-button-retro--sky:hover:after {
+  top: 0;
+  left: 0;
+}
+.css-button-retro--sky:after {
+  content: "";
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 5px;
+  left: 5px;
+  transition: 0.2s;
+  background-color: #3a86ff;
 }
