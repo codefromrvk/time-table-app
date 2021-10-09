@@ -10,120 +10,122 @@
 </head>
 
 <body>
-    <h1 id="main-header">time table </h1>
-    <div id="table-container">
-        <table id="table">
-            <thead>
-                <tr>
-                    <th>Days/Time</th>
-                    <th>9:00-9:55</th>
-                    <th>10:00-10:55</th>
-                    <th>11:10-12:05</th>
-                    <th>12:10-1:00</th>
-                    <th>2:00-2:40</th>
-                    <th>2:45-3:30</th>
-                    <th>3:35-4:15</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr id="mon">
-                    <th>Mon</th>
-                    <td class="subject">---</td>
-                    <td class="subject">---</td>
-                    <td class="subject">---</td>
-                    <td class="subject">---</td>
-                    <td class="subject">---</td>
-                    <td class="subject">---</td>
-                    <td class="subject">---</td>
+    <div id="main">
+        <h1 id="main-header">time table </h1>
+        <div id="table-container">
+            <table id="table">
+                <thead>
+                    <tr>
+                        <th>Days/Time</th>
+                        <th>9:00-9:55</th>
+                        <th>10:00-10:55</th>
+                        <th>11:10-12:05</th>
+                        <th>12:10-1:00</th>
+                        <th>2:00-2:40</th>
+                        <th>2:45-3:30</th>
+                        <th>3:35-4:15</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="mon">
+                        <th>Mon</th>
+                        <td class="subject">---</td>
+                        <td class="subject">---</td>
+                        <td class="subject">---</td>
+                        <td class="subject">---</td>
+                        <td class="subject">---</td>
+                        <td class="subject">---</td>
+                        <td class="subject">---</td>
 
-                </tr>
-                <tr>
-                    <th>Tue</th>
-                    <td class="subject">---</td>
-                    <td class="subject">---</td>
-                    <td class="subject">---</td>
-                    <td class="subject">---</td>
-                    <td class="subject">---</td>
-                    <td class="subject">---</td>
-                    <td class="subject">---</td>
+                    </tr>
+                    <tr>
+                        <th>Tue</th>
+                        <td class="subject">---</td>
+                        <td class="subject">---</td>
+                        <td class="subject">---</td>
+                        <td class="subject">---</td>
+                        <td class="subject">---</td>
+                        <td class="subject">---</td>
+                        <td class="subject">---</td>
 
-                </tr>
-                <tr>
-                    <th>Wed</th>
-                    <td class="subject">---</td>
-                    <td class="subject">---</td>
-                    <td class="subject">---</td>
-                    <td class="subject">---</td>
-                    <td class="subject">---</td>
-                    <td class="subject">---</td>
-                    <td class="subject">---</td>
+                    </tr>
+                    <tr>
+                        <th>Wed</th>
+                        <td class="subject">---</td>
+                        <td class="subject">---</td>
+                        <td class="subject">---</td>
+                        <td class="subject">---</td>
+                        <td class="subject">---</td>
+                        <td class="subject">---</td>
+                        <td class="subject">---</td>
 
-                </tr>
-                <tr>
-                    <th>Thur</th>
-                    <td class="subject">---</td>
-                    <td class="subject">---</td>
-                    <td class="subject">---</td>
-                    <td class="subject">---</td>
-                    <td class="subject">---</td>
-                    <td class="subject">---</td>
-                    <td class="subject">---</td>
+                    </tr>
+                    <tr>
+                        <th>Thur</th>
+                        <td class="subject">---</td>
+                        <td class="subject">---</td>
+                        <td class="subject">---</td>
+                        <td class="subject">---</td>
+                        <td class="subject">---</td>
+                        <td class="subject">---</td>
+                        <td class="subject">---</td>
 
-                </tr>
-                <tr>
-                    <th>Fri</th>
-                    <td class="subject">---</td>
-                    <td class="subject">---</td>
-                    <td class="subject">---</td>
-                    <td class="subject">---</td>
-                    <td class="subject">---</td>
-                    <td class="subject">---</td>
-                    <td class="subject">---</td>
+                    </tr>
+                    <tr>
+                        <th>Fri</th>
+                        <td class="subject">---</td>
+                        <td class="subject">---</td>
+                        <td class="subject">---</td>
+                        <td class="subject">---</td>
+                        <td class="subject">---</td>
+                        <td class="subject">---</td>
+                        <td class="subject">---</td>
 
-                </tr>
-                <tr>
-                    <th>Sat</th>
-                    <td class="subject">---</td>
-                    <td class="subject">---</td>
-                    <td class="subject">---</td>
-                    <td class="subject">---</td>
-                    <td class="subject">---</td>
-                    <td class="subject">---</td>
-                    <td class="subject">---</td>
+                    </tr>
+                    <tr>
+                        <th>Sat</th>
+                        <td class="subject">---</td>
+                        <td class="subject">---</td>
+                        <td class="subject">---</td>
+                        <td class="subject">---</td>
+                        <td class="subject">---</td>
+                        <td class="subject">---</td>
+                        <td class="subject">---</td>
 
-                </tr>
-            </tbody>
+                    </tr>
+                </tbody>
 
 
-        </table>
+            </table>
+        </div>
+
+        <section class="container">
+            <div id="left">
+                <label for="input-ele">
+                    <span><strong> Add subjects:</strong></span>
+                    <input id="input-ele-subject" type="text">
+
+                </label>
+                <label for="input-ele-time">
+                    <span><strong>Time per class:</strong></span>
+                    <input id="input-ele-time" type="number">
+                </label>
+                <label for="input-ele-freq">
+                    <span> <strong> Freq/week:</strong></span>
+                    <input id="input-ele-freq" type="number">
+                </label>
+                <button id="add-btn" class="css-button-retro--sky">Add</button>
+            </div>
+            <div id="right">
+                <p> <strong>Subjects added</strong></p>
+                <ul id="lists">
+                </ul>
+                <button id="output-btn" class="css-button-retro--sky">Generate</button>
+            </div>
+
+
+        </section>
     </div>
-
-    <section class="container">
-        <div id="left">
-            <label for="input-ele">
-                <strong> Add subjects:</strong>
-                <input id="input-ele-subject" type="text">
-
-            </label>
-            <label for="input-ele-time">
-                <strong>Time per class:</strong>
-                <input id="input-ele-time" type="number">
-            </label>
-            <label for="input-ele-freq">
-                <strong> Freq/week:</strong>
-                <input id="input-ele-freq" type="number">
-            </label>
-            <button id="add-btn" class="css-button-retro--sky">Add</button>
-        </div>
-        <div id="right">
-            <p> <strong>Subjects added</strong></p>
-            <ul id="lists">
-            </ul>
-            <button id="output-btn" class="css-button-retro--sky">Generate</button>
-        </div>
-
-
-    </section>
     <script src="app.js"></script>
 </body>
 
