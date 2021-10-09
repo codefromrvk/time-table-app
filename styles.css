@@ -7,6 +7,11 @@
   --primary-color: #1d4ed8;
   --secondary-color: #93c5fd;
 }
+body {
+  background-image: url("./wave.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
 li {
   list-style: none;
 }
@@ -50,7 +55,7 @@ p {
 }
 label {
   display: block;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
 }
 #left {
   width: 50%;
