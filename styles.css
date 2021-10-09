@@ -41,6 +41,7 @@ td,
 th {
   border: 1px solid var(--primary-color);
   text-align: center;
+  cursor: pointer;
 }
 p {
   display: block;
@@ -70,6 +71,13 @@ label {
 }
 #right p {
   margin: 1rem auto;
+}
+#right > ul > li {
+  margin-bottom: 0.5rem;
+}
+#right > ul > li > button {
+  padding: 0.2rem;
+  cursor: pointer;
 }
 #add-btn {
   display: block;
