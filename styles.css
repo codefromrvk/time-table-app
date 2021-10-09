@@ -15,6 +15,9 @@ body {
 li {
   list-style: none;
 }
+#main {
+  /* margin: 6rem; */
+}
 #main-header {
   margin: 1rem;
   text-align: center;
@@ -27,7 +30,7 @@ table {
   width: 50%;
   margin: auto;
   /* border: 1px solid black; */
-  border-collapse: collapse;
+  /* border-collapse: collapse; */
   font-size: 0.8rem;
 }
 tbody {
@@ -59,7 +62,6 @@ label {
 }
 #left {
   width: 50%;
-  padding: 1rem;
 }
 
 #right {
@@ -76,6 +78,7 @@ label {
 #output-btn {
   display: block;
   padding: 0.1rem 1.2rem;
+  font-size: 0.8rem;
 }
 .css-button-retro--sky {
   /* min-width: 130px;
