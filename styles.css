@@ -4,13 +4,14 @@
   box-sizing: border-box;
 }
 :root {
-  --primary-color: #800020;
+  --primary-color: #828F3B;
   --secondary-color: #93c5fd;
 }
 body {
   background-image: url("./wave.svg");
   background-repeat: no-repeat;
   background-position: center;
+  font-family: sans-serif;
 }
 li {
   list-style: none;
@@ -22,6 +23,7 @@ li {
   margin: 1rem;
   text-align: center;
   color: var(--primary-color);
+  text-transform: capitalize;
 }
 #table-container {
   padding: 1rem;
@@ -30,7 +32,7 @@ table {
   width: 50%;
   margin: auto;
   /* border: 1px solid black; */
-  /* border-collapse: collapse; */
+  border-collapse: collapse;
   font-size: 0.8rem;
 }
 tbody {
@@ -42,6 +44,8 @@ th {
   border: 1px solid var(--primary-color);
   text-align: center;
   cursor: pointer;
+  padding: 5px 25px;
+  font-size: 1.2em;
 }
 p {
   display: block;
@@ -61,6 +65,11 @@ label {
   display: block;
   padding-bottom: 0.5rem;
 }
+label input{
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--primary-color);
+}
 #left {
   width: 50%;
 }
@@ -76,8 +85,10 @@ label {
   margin-bottom: 0.5rem;
 }
 #right > ul > li > button {
-  padding: 0.2rem;
+  padding: 2px 10px;
   cursor: pointer;
+  background: transparent;
+  border: 1px solid #ff6969;
 }
 #add-btn {
   display: block;
